@@ -7,33 +7,26 @@ The script runs on a compute instance on Google Cloud. It periodically scrapes a
 
 ## Overview and How to Edit Script:
 
-### Step 1: Find what you want on the site and grab the URL
+### Step 1: You want to create a separate Gmail account for this and turn ON less secure apps. See https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cif-less-secure-app-access-is-off-for-your-account for more info
+
+### Step 2: Find what you want on the site and grab the URL
 First, you have to narrow down what you want. Let’s say our main goal is to find the best & most affordable place possible. For NYC, all the good places under $2k/mo are usually booked well in advance, but people do cancel and new listings come and go almost immediately due to very high demand. Also listers may offer discounts. So you go on Airbnb and narrow down your query and now you have something that looks like this:
 
 ![alt text](https://i.insider.com/5e471a0e3b62b76bed4fe3a2)
 
 Now you copy the URL. This is where the new listing could appear and hence what we will be searching and data mining, periodically, once every three hours.
 
-### Step 2: You want to create a separate Gmail account for this and turn ON less secure apps.
-
-### Step 3: Edit Script with Your Details
-
-### Step 4: Import Packages and Libraries as Needed:
+### Step 3: Edit Script with Your Details 
+#### Step 3.1: Edit line 1 with your search URL in the AirBNB_Hacker.py as shown below:
 ~~~
-import time
-import json
-import smtplib, ssl
-from os.path import exists
-from selenium import webdriver
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+url = "your url here"
 ~~~
-“pip install” these packages if you don’t have them. Selenium is our web scraper. 
-
-### Step 4: Edit Script file (AirBNB_Hacker.py) with Your Details
+#### Step 3.2: Edit line 42 to line 44 with your email details in the AirBNB_Hacker.py as shown below:
+~~~
+sender_email = "your sender gmail"
+receiver_email = "email of whom you want to send it to"
+password = "password for sender_email"
+~~~
 
 ## How to run it in the cloud
 To automate things you have to put this script on a compute instance on google cloud. To get started, get a free account on google cloud and follow these steps:
@@ -57,9 +50,19 @@ To automate things you have to put this script on a compute instance on google c
   Next, you’ll want to upload the python script file (AirBNB_Hacker.py) after SSHing into the terminal. 
   ![image](https://user-images.githubusercontent.com/55500076/144329725-d67d17bd-792c-4b60-a858-6799692c0991.png)
 
-  Also, pip install any the missing libraries.
+  Also, pip install all these libraries by running below code: (Only needs to be ran once)
+  ~~~
+  !pip install time
+  !pip install json
+  !pip install smtplib
+  !pip install ssl
+  !pip install os
+  !pip install selenium # Selenium is our web scraper. 
+  !pip install email
+  !pip install webdriver_manager.chrome 
+  ~~~
 
-  Test everything, make sure it works by running
+  To Test everything, make sure it works by running
   ~~~
   python AirBNB_Hacker.py
   ~~~
