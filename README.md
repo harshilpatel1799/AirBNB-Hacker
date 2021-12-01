@@ -39,14 +39,17 @@ To automate things you have to put this script on a compute instance on google c
   Allow HTTP & HTTPS traffic.
   Go to the management dropdown, change premptibility to “on”. Smash the create button.
 
-  Once the new machine is up and running, you’ll want to SSH into it.
+  Once the new machine is up and running, you’ll want to SSH into it. See below:
+  
+![alt text](https://miro.medium.com/max/700/1*pnUgZLXGCP03-U9E9ZocPg.png)
 
   Install Python and Miniconda with these commands in the terminal:
   ~~~
   curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   bash miniconda3-latest-Linux-x86_64.sh
   ~~~
-  Next, you’ll want to upload the Repos's script python file (AirBNB Hacker.py) after SSHing into the terminal. 
+  Next, you’ll want to upload the python script file (AirBNB_Hacker.py) after SSHing into the terminal. 
+  ![image](https://user-images.githubusercontent.com/55500076/144329725-d67d17bd-792c-4b60-a858-6799692c0991.png)
 
   Also, pip install any the missing libraries.
 
