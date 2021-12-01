@@ -29,7 +29,7 @@ password = "password for sender_email"
 ~~~
 
 ## How to run it in the cloud
-To automate things you have to put this script on a compute instance on google cloud. To get started, get a free account on google cloud and follow these steps:
+To automate things you have to put this script on a compute instance on google cloud. To get started, get a free account on google cloud (https://cloud.google.com/free/?gclid=Cj0KCQiA15yNBhDTARIsAGnwe0VIXDyF0Sv_1DI9I_ck1V1oWln5ZL6aog4b2_DOyBdmWsPxweLkDWoaAvtfEALw_wcB&gclsrc=aw.ds) and follow these steps:
 
   Leave everything default as it was except for these settings:
   Go to compute engine, select create an instance.
