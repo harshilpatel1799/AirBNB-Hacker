@@ -33,7 +33,7 @@ def difference(new_titles, old_titles):
     diff = [i for i in new_titles if i not in old_titles]
     return diff
 
-# Send email
+# Send email (see the read.me/front page for more information)
 def send_email(title, url):
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"
