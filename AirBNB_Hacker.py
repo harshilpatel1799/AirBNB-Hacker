@@ -39,9 +39,9 @@ def difference(new_titles, old_titles):
 def send_email(title, url):
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"
-    sender_email = "your sender gmail"
-    receiver_email = "email of whom you want to send it to"
-    password = "password for sender_email"
+    sender_email = "patelairbnb2021@gmail.com"
+    receiver_email = "harshilpatel.1799@gmail.com"
+    password = "riyaguru"
     subject = title
     body = url
     # Create a multipart message and set headers
