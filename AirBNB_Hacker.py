@@ -75,7 +75,7 @@ def runit(url):
             time.sleep(2)
     store_titles(new_titles)
 
-url = "your url here"
+url = "your url here" # Enter URL Here
     runit(url)
 else:
     titles = list(get_data(url).keys())
