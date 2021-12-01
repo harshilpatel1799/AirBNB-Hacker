@@ -1,3 +1,5 @@
+url = "your url here" # Enter URL Here
+
 import time
 import json
 import smtplib, ssl
@@ -75,7 +77,7 @@ def runit(url):
             time.sleep(2)
     store_titles(new_titles)
 
-url = "your url here" # Enter URL Here
+if exists('titles.json'):
     runit(url)
 else:
     titles = list(get_data(url).keys())
