@@ -3,17 +3,22 @@
 ## Python Script to Find Last-minute Deals on Airbnb:
 To find the best deals on Airbnb, you need to check the listings and you need to do it often. This repetitive process can be automated. This script is essentially an Airbnb a notification service as AirBNB does not have one. 
 
-The script runs on a compute instance on Google Cloud. It periodically scrapes all listings for a particular query and sends you an email if a new one has been found. This can work on all major cloud providers given you change the cloud server/SSH access points.
+The script runs on a compute instance on Google Cloud. It periodically scrapes all listings for a particular query and sends you an email if a new one has been found. 
 
-## Overview:
-Find what you want on the site and grab the URL
+## Overview and How to Edit Script:
+
+### Step 1: Find what you want on the site and grab the URL
 First, you have to narrow down what you want. Let’s say our main goal is to find the best & most affordable place possible. For NYC, all the good places under $2k/mo are usually booked well in advance, but people do cancel and new listings come and go almost immediately due to very high demand. Also listers may offer discounts. So you go on Airbnb and narrow down your query and now you have something that looks like this:
 
 ![alt text](https://i.insider.com/5e471a0e3b62b76bed4fe3a2)
 
-Now you grab the URL. This is where the new listing could appear and hence what we will be polling, periodically, once every three hours.
+Now you copy the URL. This is where the new listing could appear and hence what we will be searching and data mining, periodically, once every three hours.
 
-## Libraries to Import:
+### Step 2: You want to create a separate Gmail account for this and turn ON less secure apps.
+
+### Step 3: Edit Script with Your Details
+
+### Step 4: Import Packages and Libraries as Needed:
 ~~~
 import time
 import json
@@ -26,8 +31,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 ~~~
-
 “pip install” these packages if you don’t have them. Selenium is our web scraper. 
+
+### Step 4: Edit Script file (AirBNB_Hacker.py) with Your Details
 
 ## How to run it in the cloud
 To automate things you have to put this script on a compute instance on google cloud. To get started, get a free account on google cloud and follow these steps:
